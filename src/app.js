@@ -61,15 +61,16 @@ app.get('',(req,res)=>{
 })
 app.get('/about',(req,res)=>{
     res.render('about',{
-        title:"Google logo",
-        name:"Sundar pichai"
+        title:"About me",
+        name:"Malika Gulati"
     })
 })
 app.get('/help',(req,res)=>{
     res.render('help',{
         title:"Help",
-        name:"malika",
-        msg:"These are some help options"
+        name:"Malika Gulati",
+        msg:"For more help email me at-",
+        email: "malikagulati015@gmail.com"
     })
 })
 app.get('/help/*',(req,res)=>{
