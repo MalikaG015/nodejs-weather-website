@@ -7,6 +7,7 @@ const forecast=require('./utils/forecast')
 
 
 const app=express()
+const port=process.env.PORT || 3000
 // for dynamic files rendering
 app.set('view engine','hbs')
 const viewsPath=path.join(__dirname,'../templates/views')
@@ -90,8 +91,8 @@ res.render('404',{
 
 
 //start the server
-app.listen(3000,()=>{
-    console.log("server started at port 3000")
+app.listen(port,()=>{
+    console.log("server started at port " + port)
 })
 //1.css and img route in about.hbs
 //2.line 7 and 8 in app.js
